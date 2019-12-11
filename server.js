@@ -6,6 +6,7 @@ const knex = require('knex')
 
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
+const orders = require('./controllers/orders');
 const auth = require('./controllers/authorization');
 
 const db = knex({
@@ -24,6 +25,8 @@ app.post('/signin', signin.signinAuthentication(db, bcrypt))
 app.post('/register', (req, res) => { register.registerWithToken(req, res, db, bcrypt) })
 app.get('/profile/:id', auth.requireAuth, (req, res) => { profile.handleProfileGet(req, res, db)})
 app.post('/profile/:id', auth.requireAuth, (req, res) => { profile.handleProfileUpdate(req, res, db)})
+app.get('/orders/:isordercomplete', (req, res) => { orders.handleOrdersGet(req, res, db)})
+app.post('/orders/:ordernumber', (req, res) => { orders.handleOrderUpdate(req, res, db)})
 app.put('/image', auth.requireAuth, (req, res) => {image.handleImage(req, res, db)})
 app.post('/imageurl', auth.requireAuth, (req, res) => { image.handleApiCall(req, res)})
 

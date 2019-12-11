@@ -2,5 +2,9 @@ BEGIN TRANSACTION;
 
 INSERT into users (name, email, entries, joined) values ('Tyler', 'tyler@gmail.com', 5, '2018-01-01');
 INSERT into login (hash, email) values ('$2a$10$upz0hE5YgrSIiHOsRKwqeuPNGJ1A3GvPVTEvcK/mOxKay30YK8CRa', 'tyler@gmail.com');
+INSERT into orders (orderNumber, address, description, orderNotes, isOrderComplete) values ('100122', '221B Baker St', 'Sherlock Holmes is Loud', 'Order Notes for 221B', false);
+INSERT into orders (orderNumber, address, description, orderNotes, isOrderComplete) values ('100123', '221C Baker St', 'Cranky about noisy neighbor', 'Order Notes for 221C', false);
+INSERT into orders (orderNumber, address, description, orderNotes, isOrderComplete) values ('100124', '1000 Main St', 'This guy is has an issue', 'Order Notes for 1000 Main St.', false);
+
 
 COMMIT;
