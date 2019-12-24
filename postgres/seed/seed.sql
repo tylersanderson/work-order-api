@@ -1,7 +1,7 @@
 BEGIN TRANSACTION;
 
-INSERT into users (name, email, entries, joined) values ('Tyler', 'tyler@gmail.com', 5, '2018-01-01');
-INSERT into login (hash, email) values ('$2a$10$upz0hE5YgrSIiHOsRKwqeuPNGJ1A3GvPVTEvcK/mOxKay30YK8CRa', 'tyler@gmail.com');
+INSERT into users (name, email, joined) values ('Demo Account', 'demo@demo.com', '2018-01-01');
+INSERT into login (hash, email) values ('$2a$10$upz0hE5YgrSIiHOsRKwqeuPNGJ1A3GvPVTEvcK/mOxKay30YK8CRa', 'demo@demo.com');
 INSERT into orders (orderNumber, address, description, orderNotes, isOrderComplete, orderLat, orderLong) values ('100121', 'One Memorial Stadium Drive', 'Maintenance requested on stadium screens', 'Order Notes for 100121...', false, '40.8206', '-96.7056');
 INSERT into orders (orderNumber, address, description, orderNotes, isOrderComplete, orderLat, orderLong) values ('100122', '1445 K St', 'Sower statue requires renovation', 'Order Notes for 100122...', false, '40.8081', '-96.6997');
 INSERT into orders (orderNumber, address, description, orderNotes, isOrderComplete, orderLat, orderLong) values ('100123', '1222 S 27th St', 'Zoo animals escaped', 'Order Notes for 100123...', false, '40.8006', '-96.6795');
