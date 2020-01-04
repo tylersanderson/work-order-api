@@ -11,6 +11,7 @@ services:
     environment:
       POSTGRES_URI: postgres://sally:secret@postgres:5432/work-order-docker
       REDIS_URI: redis://redis:6379
+      JWTSIGN: JWTSIGNATURE
     links:
       - postgres
       - redis
